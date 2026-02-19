@@ -21,7 +21,7 @@ if birthdays_today.empty:
 else:
     for _, row in birthdays_today.iterrows():
         # 2. Pick a random letter template and replace [NAME]
-        template_path = f"letter_templates/letter_{random.randint(1, 3)}.txt"
+        template_path = f"letter_{random.randint(1, 3)}.txt"
         with open(template_path) as file:
             letter = file.read().replace("[NAME]", row["name"]).replace("[SENDER]", SENDER_NAME)
 
